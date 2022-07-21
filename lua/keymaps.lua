@@ -13,3 +13,16 @@ keymap('n', '<c-j>', '<c-w>j', opts)
 keymap('n', '<c-k>', '<c-w>k', opts)
 keymap('n', '<c-l>', '<c-w>l', opts)
 
+-- code execution in nvim
+--vim.cmd[[
+--augroup exe_code
+--    autocmd!
+--
+--    " execute python code
+--    autocmd FileType python nnoremap <buffer> <leader>r :sp<CR> :term python3 %<CR> :startinsert<CR> 
+--
+--    " execute bash code
+--    autocmd FileType bash, sh nnoremap <buffer> <leader>r :sp<CR> :term bash %<CR> :startinsert<CR> 
+--
+--augroup END
+--]] 
